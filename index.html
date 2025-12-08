@@ -104,6 +104,37 @@
     nav a:hover {
       color: #1ec6ff;
     }
+    /* Dropdown styles */
+    nav li {
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #0f1e40;
+      min-width: 200px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      border-radius: 4px;
+      padding: 10px 0;
+      margin-top: 5px;
+      z-index: 1001;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 10px 20px;
+      color: #ffffff;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .dropdown-content a:hover {
+      background-color: rgba(30, 198, 255, 0.2);
+      color: #1ec6ff;
+    }
+    nav li:hover .dropdown-content {
+      display: block;
+    }
     /* Mobile Adjustments */
     @media (max-width: 768px) {
       .menu-icon {
@@ -139,6 +170,20 @@
       /* Show menu when checkbox is checked */
       #menu-toggle:checked + .menu-icon + nav ul {
         display: flex;
+      }
+      .dropdown-content {
+        position: static;
+        display: none;
+        box-shadow: none;
+        margin-top: 0;
+        padding: 0;
+        background-color: rgba(30, 198, 255, 0.1);
+      }
+      nav li:hover .dropdown-content {
+        display: none;
+      }
+      .dropdown-content.active {
+        display: block;
       }
     }
     /* Hero Section */
@@ -446,6 +491,18 @@
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
+          <li>
+            <a href="#" class="dropdown-toggle">Anunturi</a>
+            <div class="dropdown-content">
+              <a href="/anunturi/placeholder.html">Placeholder Announcement</a>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="dropdown-toggle">Proiecte</a>
+            <div class="dropdown-content">
+              <a href="/proiecte/agrifuture.html">AgriFuture</a>
+            </div>
+          </li>
           <li><a href="#services">Services</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -643,6 +700,17 @@
     backToTop.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    // Mobile dropdown toggle
+    if (window.innerWidth <= 768) {
+      document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          const dropdown = this.nextElementSibling;
+          dropdown.classList.toggle('active');
+        });
+      });
+    }
   </script>
 </body>
 </html>
