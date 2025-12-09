@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Lansarea proiectului AgriFuture - Infinity Edge AI" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lansarea proiectului AgriFuture - Infinity Edge AI</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
+  <!-- AOS Animation Library CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- Global CSS -->
+  <link href="../static/global.css" rel="stylesheet">
+  <style>
+    /* Page-specific styles */
+    .page-header {
+      background: linear-gradient(-45deg, #0c0f15, #081229, #0f1e40, #1ec6ff);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      padding: 80px 20px 60px;
+      text-align: center;
+      color: #ffffff;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .page-header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .page-header h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+    .page-header .date {
+      font-size: 1rem;
+      font-weight: 300;
+      opacity: 0.9;
+      margin-top: 10px;
+    }
+    /* Content Section */
+    .content-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      text-align: left;
+    }
+    .announcement-badge {
+      display: inline-block;
+      background-color: #1ec6ff;
+      color: #ffffff;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .content-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      margin-top: 40px;
+      font-weight: 700;
+      color: #0f1e40;
+    }
+    .content-section p {
+      font-size: 1.1rem;
+      font-weight: 300;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .content-section ul, .content-section ol {
+      font-size: 1.1rem;
+      font-weight: 300;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #555;
+      padding-left: 30px;
+    }
+    .content-section li {
+      margin-bottom: 10px;
+    }
+    .project-details {
+      background-color: #f8f9fa;
+      padding: 25px;
+      border-radius: 8px;
+      border-left: 4px solid #1ec6ff;
+      margin: 30px 0;
+    }
+    .project-details h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: #0f1e40;
+      font-weight: 600;
+    }
+    .project-details p {
+      margin-bottom: 10px;
+    }
+    .announcement-meta {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-top: 40px;
+      border-left: 4px solid #1ec6ff;
+    }
+    .announcement-meta h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: #0f1e40;
+      font-weight: 600;
+    }
+    .announcement-meta p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    .announcement-meta a {
+      color: #1ec6ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .announcement-meta a:hover {
+      text-decoration: underline;
+    }
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2rem; }
+      .page-header h2 { font-size: 1.3rem; }
+      .content-section h2 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Back-to-top Button -->
+  <button id="back-to-top" title="Back to Top">&#8679;</button>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../logo.png" alt="Infinity Edge AI Logo" />
+        <span>Infinity Edge AI</span>
+      </a>
+      <!-- Mobile menu toggle -->
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav>
+        <ul>
+          <li>
+            <a href="../index.html#about">About</a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-toggle">Anunturi</a>
+            <div class="dropdown-content">
+              <a href="lansare.html">Lansarea proiectului AgriFuture</a>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="dropdown-toggle">Proiecte</a>
+            <div class="dropdown-content">
+              <a href="../proiecte/agrifuture.html">AgriFuture</a>
+            </div>
+          </li>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../index.html#team">Team</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header" data-aos="fade-up">
+    <div class="announcement-badge">COMUNICAT DE PRESĂ</div>
+    <h1>Lansarea proiectului „AgriFuture – Transformarea digitală a agriculturii prin inovație și tehnologie avansată"</h1>
+    <p class="date">07 Octombrie, 2025</p>
+  </section>
+
+  <!-- Content Section -->
+  <section class="content-section" data-aos="fade-up">
+    <p>
+      <strong>INFINITY EDGE AI S.R.L.</strong> în calitate de beneficiar, anunță lansarea proiectului „AgriFuture – Transformarea digitală a agriculturii prin inovație și tehnologie avansată", cod SMIS 334817, proiect cofinanțat din Fondul European de Dezvoltare Regională prin Programul Creștere Inteligentă, Digitalizare și Instrumente Financiare (POCIDIF) 2021–2027, în cadrul apelului PCIDIF/155/PCIDIF_P1/OP1/RSO1.1/PCIDIF_A1 – Sprijin pentru întreprinderi nou înființate inovatoare, Acțiunea 1.1, Măsura 1.1.1, Componenta 1-LDR.
+    </p>
+    
+    <div class="project-details">
+      <h3>Detalii proiect</h3>
+      <p><strong>Perioada de implementare:</strong> 15.09.2025 – 30.08.2027</p>
+      <p><strong>Valoarea totală a proiectului:</strong> 7.907.600,37 lei, din care:</p>
+      <ul>
+        <li>6.721.460,31 lei – valoare eligibilă nerambursabilă din partea fondurilor FEDR/Uniunii Europene</li>
+        <li>1.186.140,06 lei – cofinanțare din bugetul național</li>
+      </ul>
+    </div>
+    
+    <h2>Obiectivul general al proiectului</h2>
+    <p>
+      Obiectivul general al proiectului AgriFuture este transformarea digitală a agriculturii prin integrarea de soluții inovatoare și tehnologii avansate, care să contribuie la creșterea eficienței, competitivității și sustenabilității exploatațiilor agricole.
+    </p>
+    
+    <h2>Obiective specifice</h2>
+    <p>Prin implementarea proiectului se urmăresc, în principal, următoarele obiective specifice:</p>
+    <ul>
+      <li>dezvoltarea și implementarea unei platforme digitale integrate pentru monitorizarea și gestionarea datelor din exploatațiile agricole</li>
+      <li>introducerea de tehnologii inteligente (senzori, IoT, analize de date) pentru optimizarea utilizării resurselor (apă, inputuri, energie)</li>
+      <li>sprijinirea procesului decizional al fermierilor prin instrumente digitale avansate și rapoarte în timp real</li>
+      <li>creșterea gradului de digitalizare și inovare în cadrul întreprinderii beneficiare</li>
+    </ul>
+    
+    <h2>Activități principale</h2>
+    <p>Proiectul include următoarele activități principale:</p>
+    <ul>
+      <li>achiziția de echipamente hardware și infrastructură IT necesare dezvoltării soluției AgriFuture</li>
+      <li>dezvoltarea și personalizarea platformei digitale și a modulelor software aferente</li>
+      <li>testarea și validarea soluțiilor tehnice în scenarii reale de exploatații agricole</li>
+      <li>instruirea personalului și a utilizatorilor în utilizarea soluțiilor digitale</li>
+      <li>activități de informare și publicitate privind proiectul și rezultatele acestuia</li>
+    </ul>
+
+    <h2>Rezultate așteptate</h2>
+    <p>La finalizarea proiectului se preconizează, în principal, următoarele rezultate:</p>
+    <ul>
+      <li>o platformă digitală funcțională pentru agricultura inteligentă, implementată și operațională</li>
+      <li>echipamente și infrastructură tehnologică modernă, dedicate transformării digitale a activităților agricole</li>
+      <li>utilizatori/furnizori/fermieri care beneficiază de soluția AgriFuture</li>
+      <li>creșterea gradului de digitalizare și inovare în sectorul agricol deservit de beneficiar</li>
+    </ul>
+
+    <div class="announcement-meta" data-aos="fade-up" data-aos-delay="20">
+      <h3>Informații de contact</h3>
+      <p>
+        Pentru informații suplimentare ne puteți contacta prin următoarele mijloace:<br><br>
+        <strong>INFINITY EDGE AI S.R.L.</strong><br>
+        <strong>Adresă:</strong> Municipiul Piatra Neamț, Strada 1 Decembrie 1918, nr. 60, județul Neamț<br>
+        <strong>Persoană de contact:</strong> Marius Pădureanu, Manager de proiect<br>
+        <strong>E-mail:</strong> <a href="mailto:office@infinityedgeai.com">office@infinityedgeai.com</a><br>
+        <strong>Website:</strong> <a href="https://www.infinityedgeai.com/" target="_blank">https://www.infinityedgeai.com/</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      &copy; <span class="footer-year"></span> Infinity Edge AI. All rights reserved.
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- AOS Animation Library JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    document.querySelector('.footer-year').textContent = new Date().getFullYear();
+
+    // Back-to-top button functionality
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Mobile dropdown toggle
+    if (window.innerWidth <= 768) {
+      document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          const dropdown = this.nextElementSibling;
+          dropdown.classList.toggle('active');
+        });
+      });
+    }
+  </script>
+</body>
+</html>

@@ -109,5 +109,5 @@ infinitywebsite/
 ├── proiecte/
 │   └── agrifuture.html     # Project page with page-specific styles
 └── anunturi/
-    └── placeholder.html    # Announcement page with page-specific styles
+    └── lansare.html        # Announcement page with page-specific styles
 ```
