@@ -121,7 +121,7 @@ nav li {
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   border-radius: 4px;
   padding: 10px 0;
-  margin-top: 5px;
+  margin-top: 0;
   z-index: 1100;
 }
 
@@ -138,7 +138,8 @@ nav li {
   color: #1ec6ff;
 }
 
-nav li:hover .dropdown-content {
+nav li:hover .dropdown-content,
+.dropdown-content:hover {
   display: block;
 }
 
