@@ -10,156 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
   <!-- AOS Animation Library CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- Global CSS -->
+  <link href="../static/global.css" rel="stylesheet">
   <style>
-    /* Global Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      color: #333;
-      background-color: #f8f9fa;
-      overflow-x: hidden;
-    }
-    /* Header & Navigation */
-    header {
-      position: sticky;
-      top: 0;
-      width: 100%;
-      background-color: #0f1e40;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 70px;
-      position: relative;
-    }
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-    .nav-logo img {
-      width: 40px;
-      margin-right: 10px;
-    }
-    .nav-logo span {
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 1.2rem;
-    }
-    /* Hamburger Menu for Mobile */
-    #menu-toggle {
-      display: none;
-    }
-    .menu-icon {
-      display: none;
-    }
-    /* Navigation links */
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav a {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #1ec6ff;
-    }
-    /* Dropdown styles */
-    nav li {
-      position: relative;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #0f1e40;
-      min-width: 200px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      border-radius: 4px;
-      padding: 10px 0;
-      margin-top: 5px;
-    }
-    .dropdown-content a {
-      display: block;
-      padding: 10px 20px;
-      color: #ffffff;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
-    .dropdown-content a:hover {
-      background-color: rgba(30, 198, 255, 0.2);
-      color: #1ec6ff;
-    }
-    nav li:hover .dropdown-content {
-      display: block;
-    }
-    /* Mobile Adjustments */
-    @media (max-width: 768px) {
-      .menu-icon {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        cursor: pointer;
-      }
-      .menu-icon span {
-        display: block;
-        width: 30px;
-        height: 3px;
-        margin: 5px 0;
-        background-color: #ffffff;
-        transition: background-color 0.3s, transform 0.3s;
-      }
-      nav ul {
-        flex-direction: column;
-        width: 100%;
-        background-color: #0f1e40;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        display: none;
-      }
-      nav ul li {
-        text-align: center;
-        padding: 10px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      }
-      /* Show menu when checkbox is checked */
-      #menu-toggle:checked + .menu-icon + nav ul {
-        display: flex;
-      }
-      .dropdown-content {
-        position: static;
-        display: none;
-        box-shadow: none;
-        margin-top: 0;
-        padding: 0;
-      }
-      nav li:hover .dropdown-content {
-        display: none;
-      }
-      .dropdown-content.active {
-        display: block;
-      }
-    }
-    /* Page Header */
+    /* Page-specific styles */
     .page-header {
       background: linear-gradient(-45deg, #0c0f15, #081229, #0f1e40, #1ec6ff);
       background-size: 400% 400%;
@@ -230,6 +84,11 @@
     .announcement-meta p {
       font-size: 1rem;
       margin-bottom: 10px;
+    }
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2.5rem; }
+      .content-section h2 { font-size: 1.8rem; }
     }
     /* Footer */
     footer {
