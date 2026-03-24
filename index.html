@@ -11,203 +11,9 @@
   <!-- AOS Animation Library CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <!-- Global CSS -->
-  <link href="static/global.css" rel="stylesheet">
-  <style>
-    /* Hero Section */
-    #hero {
-      position: relative; /* Keep relative for particles and content */
-      /* width: 100%; REMOVE this */
-      width: 100vw; /* Force full viewport width */
-      left: 50%; /* Center the 100vw element */
-      transform: translateX(-50%); /* Center the 100vw element */
-      height: 80vh;
-      overflow: hidden;
-      background: linear-gradient(-45deg, #0c0f15, #081229, #0f1e40, #1ec6ff);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      /* Override generic section styles that might constrain width */
-      max-width: none;
-      margin-left: 0;
-      margin-right: 0;
-      padding-left: 0; /* Remove horizontal padding */
-      padding-right: 0; /* Remove horizontal padding */
-      /* Keep vertical padding if needed, or adjust */
-      padding-top: 0; /* Adjust as needed */
-      padding-bottom: 0; /* Adjust as needed */
-    }
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    /* Particles Container */
-    #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 800px;
-      color: #ffffff;
-      padding: 20px;
-    }
-    /* Glitch Effect on Hero Heading */
-    .hero-content h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      position: relative;
-      animation: glitch 2s infinite;
-    }
-    @keyframes glitch {
-      0% { clip: rect(42px, 9999px, 44px, 0); transform: translate(0); }
-      10% { clip: rect(85px, 9999px, 90px, 0); transform: translate(-2px, -2px); }
-      20% { clip: rect(12px, 9999px, 16px, 0); transform: translate(2px, 2px); }
-      30% { clip: rect(55px, 9999px, 60px, 0); transform: translate(-2px, 0); }
-      40% { clip: rect(18px, 9999px, 22px, 0); transform: translate(2px, -2px); }
-      50% { clip: rect(42px, 9999px, 44px, 0); transform: translate(0); }
-      100% { clip: rect(42px, 9999px, 44px, 0); transform: translate(0); }
-    }
-    #hero p {
-      font-size: 1.25rem;
-      font-weight: 300;
-      margin: 20px 0 40px;
-      line-height: 1.6;
-    }
-    /* Scroll Indicator */
-    .scroll-indicator {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 30px;
-      height: 50px;
-      border: 2px solid #ffffff;
-      border-radius: 25px;
-      opacity: 0.8;
-    }
-    .scroll-indicator::after {
-      content: "";
-      display: block;
-      width: 6px;
-      height: 6px;
-      background: #ffffff;
-      border-radius: 50%;
-      margin: 6px auto;
-      animation: scroll 2s infinite;
-    }
-    @keyframes scroll {
-      0% { opacity: 0; transform: translateY(0); }
-      50% { opacity: 1; transform: translateY(10px); }
-      100% { opacity: 0; transform: translateY(0); }
-    }
-    /* Page-specific styles */
-    /* Page-specific styles */
-    /* About Section - Additional Compliance Text */
-    #about .compliance-text {
-      font-size: 1rem;
-      font-weight: 300;
-      line-height: 1.8;
-      max-width: 800px;
-      margin: 20px auto 0;
-      color: #555;
-    }
-    /* Microsoft Partner Badge with Pulse */
-    .partner-badge {
-      display: inline-block;
-      background-color: #f3f3f3;
-      color: #0f1e40;
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      margin-top: 20px;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-    /* Services Section - Tilt Effect on Hover */
-    .services-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    .service-box {
-      background-color: #f8f9fa;
-      padding: 20px;
-      border-radius: 6px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-      transform-style: preserve-3d;
-    }
-    .service-box:hover {
-      transform: translateY(-5px) perspective(1000px) rotateX(3deg) rotateY(3deg);
-    }
-    .service-box h3 {
-      margin-bottom: 15px;
-      font-size: 1.3rem;
-      color: #0f1e40;
-      font-weight: 600;
-    }
-    .service-box p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #555;
-    }
-    /* Team Section */
-    .team-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 40px;
-      margin-top: 40px;
-    }
-    .team-member {
-      background-color: #ffffff;
-      border-radius: 6px;
-      padding: 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .team-member:hover {
-      transform: translateY(-5px);
-    }
-    .team-member img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 15px;
-    }
-    .team-member h3 {
-      font-size: 1.3rem;
-      margin-bottom: 5px;
-      color: #0f1e40;
-      font-weight: 600;
-    }
-    .team-member p {
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.4;
-    }
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      #hero h1 { font-size: 2.5rem; }
-      #hero p { font-size: 1rem; }
-    }
-  </style>
+  <link href="assets/css/global.css" rel="stylesheet">
+  <!-- Page CSS -->
+  <link href="assets/css/home.css" rel="stylesheet">
 </head>
 <body>
   <!-- Preloader -->
@@ -222,7 +28,7 @@
   <header>
     <div class="nav-container">
       <a href="#hero" class="nav-logo">
-        <img src="logo.png" alt="Infinity Edge AI Logo" />
+        <img src="assets/images/logo.png" alt="Infinity Edge AI Logo" />
         <span>Infinity Edge AI</span>
       </a>
       <!-- Mobile menu toggle -->
@@ -333,7 +139,7 @@
         </p>
       </div>
       <div class="team-member" data-aos="fade-up" data-aos-delay="300">
-        <img src="static/ee-pfp.jpeg" alt="Edgar Enuta">
+        <img src="assets/images/ee-pfp.jpeg" alt="Edgar Enuta">
         <h3>Edgar Enuta</h3>
         <p>
           Chief Technical Officer<br>
@@ -372,89 +178,9 @@
   <!-- Scripts -->
   <!-- Particles.js Library -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-    /* ParticlesJS Configuration */
-    particlesJS("particles-js", {
-      "particles": {
-        "number": {
-          "value": 80,
-          "density": { "enable": true, "value_area": 800 }
-        },
-        "color": { "value": "#ffffff" },
-        "shape": {
-          "type": "circle",
-          "stroke": { "width": 0, "color": "#000000" },
-          "polygon": { "nb_sides": 5 }
-        },
-        "opacity": { "value": 0.5, "random": false },
-        "size": { "value": 3, "random": true },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#ffffff",
-          "opacity": 0.4,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 4,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out"
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": true, "mode": "repulse" },
-          "onclick": { "enable": true, "mode": "push" },
-          "resize": true
-        },
-        "modes": {
-          "repulse": { "distance": 100 },
-          "push": { "particles_nb": 4 }
-        }
-      },
-      "retina_detect": true
-    });
-  </script>
+  <script src="assets/js/particles-config.js"></script>
   <!-- AOS Animation Library JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-    document.querySelector('.footer-year').textContent = new Date().getFullYear();
-
-    // Preloader removal
-    window.addEventListener('load', function() {
-      const preloader = document.getElementById('preloader');
-      preloader.style.opacity = '0';
-      setTimeout(() => { preloader.style.display = 'none'; }, 500);
-    });
-
-    // Back-to-top button functionality
-    const backToTop = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        backToTop.classList.add('show');
-      } else {
-        backToTop.classList.remove('show');
-      }
-    });
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Mobile dropdown toggle
-    if (window.innerWidth <= 768) {
-      document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-          e.preventDefault();
-          const dropdown = this.nextElementSibling;
-          dropdown.classList.toggle('active');
-        });
-      });
-    }
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

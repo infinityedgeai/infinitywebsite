@@ -1,0 +1,113 @@
+/* Lansare Page Styles */
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.page-header h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.page-header .date {
+  font-size: 1rem;
+  font-weight: 300;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+.content-section {
+  max-width: 900px;
+  text-align: left;
+}
+
+.announcement-badge {
+  display: inline-block;
+  background-color: #1ec6ff;
+  color: #ffffff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.content-section h2 {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.content-section ul,
+.content-section ol {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #555;
+  padding-left: 30px;
+}
+
+.content-section li {
+  margin-bottom: 10px;
+}
+
+.project-details {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 4px solid #1ec6ff;
+  margin: 30px 0;
+}
+
+.project-details h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #0f1e40;
+  font-weight: 600;
+}
+
+.project-details p {
+  margin-bottom: 10px;
+}
+
+.announcement-meta {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  border-left: 4px solid #1ec6ff;
+}
+
+.announcement-meta h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #0f1e40;
+  font-weight: 600;
+}
+
+.announcement-meta p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.announcement-meta a {
+  color: #1ec6ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.announcement-meta a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-header h1 { font-size: 2rem; }
+  .page-header h2 { font-size: 1.3rem; }
+  .content-section h2 { font-size: 1.8rem; }
+}

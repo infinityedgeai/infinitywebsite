@@ -1,0 +1,71 @@
+/* Shared Subpage Styles */
+
+.page-header {
+  background: linear-gradient(-45deg, #0c0f15, #081229, #0f1e40, #1ec6ff);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  padding: 80px 20px 60px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.banner-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.banner-logos img {
+  height: 60px;
+  object-fit: contain;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Content Section */
+.content-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.content-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  font-weight: 700;
+  color: #0f1e40;
+  text-align: center;
+}
+
+.content-section h2:first-of-type {
+  margin-top: 0;
+}
+
+.content-section p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-header h1 { font-size: 2.5rem; }
+  .page-header p { font-size: 1rem; }
+  .content-section h2 { font-size: 2rem; }
+}
